@@ -2,122 +2,112 @@
 import React, { useState } from 'react';
 
 const Schedule = () => {
-  const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  const [activeDay, setActiveDay] = useState('Monday');
+  const categories = ['Kids', 'Adults'];
+  const [activeCategory, setActiveCategory] = useState('Kids');
 
-  // Realistic schedule data mapping
   const scheduleData: Record<string, any[]> = {
-    Monday: [
-      { time: '09:00 AM - 10:00 AM', name: 'Toddler Gym', coach: 'Coach Alex', level: 'Beginner', type: 'toddler' },
-      { time: '11:00 AM - 12:30 PM', name: 'Beginners (5-8 yrs)', coach: 'Coach Sarah', level: 'Beginner', type: 'beginner' },
-      { time: '02:00 PM - 03:30 PM', name: 'Adult Gymnastics', coach: 'Coach Mike', level: 'All Levels', type: 'adult' },
-      { time: '04:00 PM - 06:00 PM', name: 'Elite Training', coach: 'Coach Sarah', level: 'Advanced', type: 'elite' }
+    Kids: [
+      { time: '04:00 PM - 05:00 PM', days: 'Mon - Sun', name: 'Batch - 1', desc: 'Basic Gymnastics & Fitness' },
+      { time: '05:00 PM - 06:00 PM', days: 'Mon - Sun', name: 'Batch - 2', desc: 'Flexibility & Endurance' },
+      { time: '06:00 PM - 07:00 PM', days: 'Mon - Sun', name: 'Batch - 3', desc: 'Advanced Physical Activities' }
     ],
-    Tuesday: [
-      { time: '09:00 AM - 11:00 AM', name: 'Open Gym', coach: 'Staff', level: 'All Levels', type: 'open' },
-      { time: '11:00 AM - 12:30 PM', name: 'Advanced (9-12 yrs)', coach: 'Coach Alex', level: 'Intermediate', type: 'advanced' },
-      { time: '02:00 PM - 03:30 PM', name: 'Tumbling 101', coach: 'Coach Mike', level: 'Beginner', type: 'tumbling' },
-      { time: '04:00 PM - 06:00 PM', name: 'Elite Training', coach: 'Coach Sarah', level: 'Advanced', type: 'elite' }
-    ],
-    Wednesday: [
-      { time: '09:00 AM - 10:00 AM', name: 'Toddler Gym', coach: 'Coach Alex', level: 'Beginner', type: 'toddler' },
-      { time: '11:00 AM - 12:30 PM', name: 'Beginners (5-8 yrs)', coach: 'Coach Sarah', level: 'Beginner', type: 'beginner' },
-      { time: '02:00 PM - 03:30 PM', name: 'Adult Gymnastics', coach: 'Coach Mike', level: 'All Levels', type: 'adult' },
-      { time: '04:00 PM - 06:00 PM', name: 'Elite Training', coach: 'Coach Sarah', level: 'Advanced', type: 'elite' }
-    ],
-    Thursday: [
-      { time: '09:00 AM - 11:00 AM', name: 'Open Gym', coach: 'Staff', level: 'All Levels', type: 'open' },
-      { time: '11:00 AM - 12:30 PM', name: 'Advanced (9-12 yrs)', coach: 'Coach Alex', level: 'Intermediate', type: 'advanced' },
-      { time: '02:00 PM - 03:30 PM', name: 'Tumbling 101', coach: 'Coach Mike', level: 'Beginner', type: 'tumbling' },
-      { time: '04:00 PM - 06:00 PM', name: 'Elite Training', coach: 'Coach Sarah', level: 'Advanced', type: 'elite' }
-    ],
-    Friday: [
-      { time: '09:00 AM - 11:00 AM', name: 'Elite Training', coach: 'Coach Sarah', level: 'Advanced', type: 'elite' },
-      { time: '11:00 AM - 01:00 PM', name: 'Open Gym', coach: 'Staff', level: 'All Levels', type: 'open' },
-      { time: '02:00 PM - 04:00 PM', name: 'Private Lessons', coach: 'Coach Mike', level: 'All Levels', type: 'private' },
-      { time: '04:00 PM - 06:00 PM', name: 'Elite Training', coach: 'Coach Alex', level: 'Advanced', type: 'elite' }
-    ],
-    Saturday: [
-      { time: '08:00 AM - 10:00 AM', name: 'Weekend Warriors (Adults)', coach: 'Coach Mike', level: 'All Levels', type: 'adult' },
-      { time: '10:30 AM - 12:30 PM', name: 'Youth Competition Prep', coach: 'Coach Sarah', level: 'Advanced', type: 'elite' },
-      { time: '01:00 PM - 04:00 PM', name: 'Community Open Gym', coach: 'Staff', level: 'All Levels', type: 'open' }
+    Adults: [
+      { time: '05:00 AM - 06:00 AM', days: 'Mon - Sun', name: 'Morning Batch 1', desc: 'Personal Training & Fitness' },
+      { time: '06:00 AM - 07:00 AM', days: 'Mon - Sun', name: 'Morning Batch 2', desc: 'Resistance Training & Calisthenics' }
     ]
   };
 
-  const activeClasses = scheduleData[activeDay] || [];
+  const activeClasses = scheduleData[activeCategory] || [];
 
   return (
     <section id="schedule" className="section container">
       <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-        <h2 className="text-gradient">Classes Schedule</h2>
-        <p style={{ color: 'var(--text-secondary)' }}>Find the perfect time to train and grow.</p>
+        <h2 className="text-gradient" style={{ fontSize: '3rem' }}>Classes Schedule & Timings</h2>
+        <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', marginTop: '1rem' }}>Find the perfect time to train and grow.</p>
       </div>
 
       {/* Tabs */}
       <div style={{ 
         display: 'flex', 
         justifyContent: 'center', 
-        gap: '1rem', 
-        marginBottom: '3rem',
+        gap: '1.5rem', 
+        marginBottom: '4rem',
         flexWrap: 'wrap' 
       }}>
-        {days.map((day) => (
+        {categories.map((cat) => (
           <button 
-            key={day}
-            onClick={() => setActiveDay(day)}
+            key={cat}
+            onClick={() => setActiveCategory(cat)}
             style={{
-              padding: '0.8rem 2rem',
+              padding: '1rem 3rem',
               borderRadius: '50px',
-              border: activeDay === day ? '1px solid var(--accent-primary)' : '1px solid rgba(255,255,255,0.1)',
-              background: activeDay === day ? 'rgba(212, 175, 55, 0.1)' : 'transparent',
-              color: activeDay === day ? 'var(--accent-primary)' : 'var(--text-secondary)',
-              fontWeight: activeDay === day ? 600 : 400,
+              border: activeCategory === cat ? '2px solid var(--accent-primary)' : '2px solid rgba(255,255,255,0.1)',
+              background: activeCategory === cat ? 'rgba(212, 175, 55, 0.1)' : 'transparent',
+              color: activeCategory === cat ? 'var(--accent-primary)' : 'var(--text-secondary)',
+              fontWeight: activeCategory === cat ? 700 : 500,
               cursor: 'pointer',
               transition: 'all 0.3s ease',
-              fontSize: '1rem'
+              fontSize: '1.2rem',
+              letterSpacing: '1px'
+            }}
+            onMouseOver={(e) => {
+              if (activeCategory !== cat) {
+                e.currentTarget.style.borderColor = 'rgba(212, 175, 55, 0.5)';
+                e.currentTarget.style.color = 'var(--text-primary)';
+              }
+            }}
+            onMouseOut={(e) => {
+              if (activeCategory !== cat) {
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
+                e.currentTarget.style.color = 'var(--text-secondary)';
+              }
             }}
           >
-            {day}
+            {cat}
           </button>
         ))}
       </div>
 
       {/* Schedule List */}
-      <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+      <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
         {activeClasses.map((cls, idx) => (
-          <div key={idx} className="glass-panel" style={{ 
+          <div key={idx} className="glass-panel schedule-row" style={{ 
             display: 'flex', 
             justifyContent: 'space-between', 
             alignItems: 'center',
-            padding: '2rem',
-            transition: 'transform 0.3s ease',
-            cursor: 'default'
+            padding: '2.5rem',
+            transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+            cursor: 'default',
+            borderRadius: 'var(--border-radius-md)'
           }}
-          onMouseOver={(e) => (e.currentTarget.style.transform = 'translateX(10px)')}
-          onMouseOut={(e) => (e.currentTarget.style.transform = 'translateX(0)')}
+          onMouseOver={(e) => {
+            e.currentTarget.style.transform = 'translateX(10px)';
+            e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.5)';
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.transform = 'translateX(0)';
+            e.currentTarget.style.boxShadow = 'none';
+          }}
           >
             <div style={{ flex: 1 }}>
-              <div style={{ color: 'var(--accent-primary)', fontWeight: 600, marginBottom: '0.5rem', fontSize: '1.1rem' }}>
-                {cls.time}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.8rem' }}>
+                <span style={{ color: 'var(--accent-primary)', fontWeight: 700, fontSize: '1.2rem', letterSpacing: '1px' }}>
+                  {cls.time}
+                </span>
+                <span style={{ background: 'rgba(255,255,255,0.1)', padding: '0.3rem 0.8rem', borderRadius: '50px', fontSize: '0.85rem', color: 'var(--text-primary)', fontWeight: 600 }}>
+                  {cls.days}
+                </span>
               </div>
-              <h3 style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>{cls.name}</h3>
-              <div style={{ display: 'flex', gap: '1rem', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                <span style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                  {cls.coach}
-                </span>
-                <span>•</span>
-                <span style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                  {cls.level}
-                </span>
+              <h3 style={{ fontSize: '1.8rem', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>{cls.name}</h3>
+              <div style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
+                {cls.desc}
               </div>
             </div>
             
             <div>
-              <button className="btn btn-secondary" style={{ padding: '0.6rem 1.5rem', fontSize: '0.9rem' }}>
+              <a href="#register" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1rem', borderRadius: '50px', textAlign: 'center', display: 'block' }}>
                 Book Class
-              </button>
+              </a>
             </div>
           </div>
         ))}

@@ -1,6 +1,5 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Classes from "@/components/Classes";
 import Coaches from "@/components/Coaches";
 import Schedule from "@/components/Schedule";
 import Events from "@/components/Events";
@@ -9,16 +8,14 @@ import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
+import Activities from "@/components/Activities";
 
 export default function Home() {
   return (
     <main>
       <Hero />
       <About />
-      <div id="programs">
-        {/* Placeholder for specific programs section if distinct from classes */}
-      </div>
-      <Classes />
+      <Activities />
       <Coaches />
       <Schedule />
       <Events />

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import RegistrationModal from "@/components/RegistrationModal";
 
 export default function MainLayout({
   children,
@@ -12,6 +13,7 @@ export default function MainLayout({
       <Navbar />
       {children}
       <Footer />
+      <RegistrationModal />
     </>
   );
 }
