@@ -233,5 +233,52 @@ img {
     text-align: center;
     justify-content: center;
   }
+  .desktop-links {
+    display: none !important;
+  }
+  .mobile-menu-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  .join-now-btn {
+    padding: 0.4rem 1rem !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.2s ease;
+}
+.mobile-menu-btn:hover {
+  color: var(--accent-primary);
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 80px; /* Below Navbar */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 10, 0.98);
+  backdrop-filter: blur(15px);
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  overflow-y: auto;
+}
+.mobile-menu-overlay a {
+  padding: 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
 }
 
