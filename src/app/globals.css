@@ -245,6 +245,15 @@ img {
     padding: 0.4rem 1rem !important;
     font-size: 0.8rem !important;
   }
+  .glass-panel {
+    padding: 1.5rem !important;
+  }
+  .glass-panel h3 {
+    font-size: 1.3rem !important;
+  }
+  .btn {
+    width: 100% !important;
+  }
 }
 
 .mobile-menu-btn {
@@ -261,11 +270,11 @@ img {
 }
 
 .mobile-menu-overlay {
-  position: fixed;
-  top: 80px; /* Below Navbar */
+  position: absolute;
+  top: 100%; /* Just below the navbar */
   left: 0;
   right: 0;
-  bottom: 0;
+  height: calc(100vh - 80px);
   background: rgba(10, 10, 10, 0.98);
   backdrop-filter: blur(15px);
   z-index: 99;

@@ -90,7 +90,7 @@ const Schedule = () => {
           }}
           >
             <div style={{ flex: 1 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.8rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '0.8rem' }}>
                 <span style={{ color: 'var(--accent-primary)', fontWeight: 700, fontSize: '1.2rem', letterSpacing: '1px' }}>
                   {cls.time}
                 </span>
