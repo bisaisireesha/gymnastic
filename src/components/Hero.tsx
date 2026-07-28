@@ -23,7 +23,7 @@ const Hero = () => {
           zIndex: -1
         }}
       />
-      <div className="container animate-fade-up">
+      <div className="container animate-fade-up hero-container">
         <h1 style={{ marginBottom: '1.5rem', maxWidth: '800px' }}>
           Defy Gravity. <br/>
           <span className="text-gradient">Discover Your Potential.</span>
@@ -51,9 +51,21 @@ const Hero = () => {
               text-align: center;
               justify-content: center;
             }
+            .hero-container {
+              text-align: center;
+            }
+            .hero-container h1 {
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .hero-container p {
+              margin-left: auto;
+              margin-right: auto;
+            }
           }
         `}</style>
         <div className="hero-buttons">
+          <a href="#schedule" className="btn btn-secondary hero-btn">Explore Classes</a>
           <a href="#register" className="btn btn-primary hero-btn">Join Now</a>
         </div>
       </div>

@@ -351,4 +351,7 @@ input:focus, select:focus, textarea:focus {
   .flex-col-mobile { flex-direction: column !important; align-items: flex-start !important; gap: 1rem !important; }
   .flex-wrap-mobile { flex-wrap: wrap !important; }
   .w-full-mobile { width: 100% !important; text-align: center; }
+  .about-grid { gap: 2rem !important; }
 }
+
+.about-grid { gap: 4rem; }

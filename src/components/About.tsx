@@ -13,7 +13,7 @@ const About = () => {
       </div>
 
       {/* Row 1: The Dream */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '8rem' }}>
+      <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', alignItems: 'center', marginBottom: '8rem' }}>
         <div style={{ position: 'relative' }}>
           <div style={{ position: 'absolute', top: '-1rem', left: '-1rem', bottom: '1rem', right: '1rem', background: 'rgba(212, 175, 55, 0.2)', borderRadius: 'var(--border-radius-lg)', zIndex: -1 }}></div>
           <img src="/story_dream.png" alt="The Dream" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: 'var(--border-radius-lg)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }} />
@@ -27,7 +27,7 @@ const About = () => {
       </div>
 
       {/* Row 2: The Obstacles */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '8rem', direction: 'rtl' }}>
+      <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', alignItems: 'center', marginBottom: '8rem', direction: 'rtl' }}>
         <div style={{ position: 'relative', direction: 'ltr' }}>
           <div style={{ position: 'absolute', top: '1rem', right: '-1rem', bottom: '-1rem', left: '1rem', background: 'rgba(212, 175, 55, 0.2)', borderRadius: 'var(--border-radius-lg)', zIndex: -1 }}></div>
           <img src="/story_obstacles.png" alt="The Obstacles" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: 'var(--border-radius-lg)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }} />
@@ -44,7 +44,7 @@ const About = () => {
       </div>
 
       {/* Row 3: The Promise */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '8rem' }}>
+      <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', alignItems: 'center', marginBottom: '8rem' }}>
         <div style={{ position: 'relative' }}>
           <div style={{ position: 'absolute', top: '-1rem', left: '-1rem', bottom: '1rem', right: '1rem', background: 'rgba(212, 175, 55, 0.2)', borderRadius: 'var(--border-radius-lg)', zIndex: -1 }}></div>
           <img src="/gallery_6.png" alt="Our Promise" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: 'var(--border-radius-lg)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }} />
@@ -61,7 +61,7 @@ const About = () => {
       </div>
 
       {/* Row 4: Vision */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '8rem', direction: 'rtl' }}>
+      <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', alignItems: 'center', marginBottom: '8rem', direction: 'rtl' }}>
         <div style={{ position: 'relative', direction: 'ltr' }}>
           <div style={{ position: 'absolute', top: '1rem', right: '-1rem', bottom: '-1rem', left: '1rem', background: 'rgba(212, 175, 55, 0.2)', borderRadius: 'var(--border-radius-lg)', zIndex: -1 }}></div>
           <img src="/gallery_1.png" alt="Building the Future" style={{ width: '100%', height: '400px', objectFit: 'cover', objectPosition: 'center 60%', borderRadius: 'var(--border-radius-lg)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }} />
