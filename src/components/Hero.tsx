@@ -36,9 +36,26 @@ const Hero = () => {
         }}>
           Join the premier gymnastics academy designed to elevate your skills from beginner to elite in a state-of-the-art facility.
         </p>
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'nowrap' }}>
-          <a href="#register" className="btn btn-primary hero-btn" style={{ display: 'inline-flex', flex: 1 }}>Join Today</a>
-          <a href="#schedule" className="btn btn-secondary hero-btn" style={{ display: 'inline-flex', flex: 1 }}>Explore Classes</a>
+        <style>{`
+          .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: nowrap;
+          }
+          @media (max-width: 600px) {
+            .hero-buttons {
+              flex-wrap: wrap;
+            }
+            .hero-buttons .hero-btn {
+              width: 100%;
+              text-align: center;
+              justify-content: center;
+            }
+          }
+        `}</style>
+        <div className="hero-buttons">
+          <a href="#register" className="btn btn-primary hero-btn">Join Today</a>
+          <a href="#schedule" className="btn btn-secondary hero-btn">Explore Classes</a>
         </div>
       </div>
     </section>

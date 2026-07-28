@@ -1,9 +1,7 @@
 "use client";
-import React, { useState } from 'react';
+import React from 'react';
 
 const Activities = () => {
-  const [selectedProgram, setSelectedProgram] = useState<string | null>(null);
-
   const programs = [
     {
       id: 'kids',
@@ -101,8 +99,7 @@ const Activities = () => {
   return (
     <section id="activities" className="section container" style={{ padding: '8rem 1rem', minHeight: '800px' }}>
       
-      {!selectedProgram ? (
-        <div className="animate-fade-up">
+      <div className="animate-fade-up">
           <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
             <h2 className="text-gradient" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '1.5rem', fontWeight: 800 }}>Activities & Programs</h2>
             <p style={{ color: 'var(--text-secondary)', maxWidth: '800px', margin: '0 auto', fontSize: '1.25rem', lineHeight: '1.8' }}>
@@ -162,69 +159,10 @@ const Activities = () => {
                     ))}
                   </ul>
 
-                  <button 
-                    onClick={() => setSelectedProgram(prog.id)}
+                  <a 
+                    href="#register"
                     className="btn btn-primary" 
-                    style={{ width: '100%', padding: '1.2rem', fontSize: '1.1rem', borderRadius: '50px' }}>
-                    {prog.buttonText}
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      ) : (
-        <div className="animate-fade-up">
-          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <button 
-              onClick={() => setSelectedProgram(null)}
-              style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.2)', color: 'var(--text-secondary)', padding: '0.8rem 2rem', borderRadius: '50px', cursor: 'pointer', marginBottom: '2rem', fontSize: '1rem', transition: 'all 0.3s' }}
-              onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.1)'; e.currentTarget.style.color = 'var(--text-primary)'; }}
-              onMouseOut={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--text-secondary)'; }}
-            >
-              ← Back to All Programs
-            </button>
-            <h2 className="text-gradient" style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', marginBottom: '1rem', fontWeight: 800 }}>
-              {selectedProgram === 'kids' ? 'Kids & Teens Activities' : 'Adults Fitness Activities'}
-            </h2>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem' }}>Detailed classes and sessions available for you to join today.</p>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '3rem' }}>
-            {detailsData[selectedProgram as keyof typeof detailsData].map((activity, idx) => (
-              <div key={idx} className="glass-panel" style={{ 
-                borderRadius: 'var(--border-radius-lg)', 
-                overflow: 'hidden',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                display: 'flex',
-                flexDirection: 'column',
-                borderTop: '4px solid var(--accent-primary)'
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.transform = 'translateY(-10px)';
-                e.currentTarget.style.boxShadow = '0 15px 35px rgba(212, 175, 55, 0.2)';
-                const img = e.currentTarget.querySelector('img');
-                if (img) img.style.transform = 'scale(1.1)';
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'none';
-                const img = e.currentTarget.querySelector('img');
-                if (img) img.style.transform = 'scale(1)';
-              }}>
-                <div style={{ height: '220px', overflow: 'hidden' }}>
-                  <img 
-                    src={activity.image} 
-                    alt={activity.title} 
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} 
-                  />
-                </div>
-                <div style={{ padding: '2rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                  <h3 style={{ fontSize: '1.5rem', color: 'var(--accent-primary)', marginBottom: '1rem', fontWeight: 800 }}>{activity.title}</h3>
-                  <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '2rem', flex: 1 }}>{activity.desc}</p>
-                  <a href="#register" className="btn btn-secondary" style={{ width: '100%', padding: '0.8rem', borderRadius: '50px', border: '1px solid var(--accent-primary)', color: 'var(--accent-primary)', background: 'transparent', transition: 'all 0.3s ease', textAlign: 'center', display: 'block' }}
-                  onMouseOver={(e) => { e.currentTarget.style.background = 'var(--accent-primary)'; e.currentTarget.style.color = '#000'; }}
-                  onMouseOut={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--accent-primary)'; }}>
+                    style={{ width: '100%', padding: '1.2rem', fontSize: '1.1rem', borderRadius: '50px', textAlign: 'center', textDecoration: 'none', display: 'inline-block' }}>
                     Book Session
                   </a>
                 </div>
@@ -232,7 +170,6 @@ const Activities = () => {
             ))}
           </div>
         </div>
-      )}
     </section>
   );
 };

@@ -8,14 +8,14 @@ const Navbar = () => {
     { href: '#home', label: 'Home' },
     { href: '#about', label: 'About' },
     { href: '#activities', label: 'Programs' },
-    { href: '#schedule', label: 'Classes Schedule' },
+    { href: '#schedule', label: 'Schedule' },
     { href: '#coaches', label: 'Coaches' },
-    { href: '#events', label: 'Events' },
     { href: '#gallery', label: 'Gallery' },
-    { href: '#pricing', label: 'Membership Plans' },
+    { href: '#pricing', label: 'Pricing' },
     { href: '#blog', label: 'Blog' },
     { href: '#faq', label: 'FAQ' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#register', label: 'Register' },
+    { href: '/login', label: 'Login' },
   ];
 
   return (
@@ -49,13 +49,14 @@ const Navbar = () => {
       {/* Desktop Links */}
       <div className="desktop-links" style={{ 
         display: 'flex', 
-        gap: '1.5rem', 
+        gap: '1rem', 
         alignItems: 'center', 
         fontWeight: 500,
+        fontSize: '0.9rem',
         padding: '0 1rem',
         flex: 1,
-        justifyContent: 'flex-start',
-        marginLeft: '2rem'
+        justifyContent: 'center',
+        marginLeft: '1rem'
       }}>
         {navLinks.map((link) => (
           <a key={link.href} href={link.href}>{link.label}</a>

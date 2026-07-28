@@ -47,7 +47,7 @@ const About = () => {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '8rem' }}>
         <div style={{ position: 'relative' }}>
           <div style={{ position: 'absolute', top: '-1rem', left: '-1rem', bottom: '1rem', right: '1rem', background: 'rgba(212, 175, 55, 0.2)', borderRadius: 'var(--border-radius-lg)', zIndex: -1 }}></div>
-          <img src="/story_promise.png" alt="Our Promise" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: 'var(--border-radius-lg)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }} />
+          <img src="/gallery_2.png" alt="Our Promise" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: 'var(--border-radius-lg)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }} />
         </div>
         <div>
           <h3 style={{ color: 'var(--text-primary)', fontSize: '2.5rem', marginBottom: '1.5rem' }}>Our Promise</h3>
@@ -64,7 +64,7 @@ const About = () => {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '8rem', direction: 'rtl' }}>
         <div style={{ position: 'relative', direction: 'ltr' }}>
           <div style={{ position: 'absolute', top: '1rem', right: '-1rem', bottom: '-1rem', left: '1rem', background: 'rgba(212, 175, 55, 0.2)', borderRadius: 'var(--border-radius-lg)', zIndex: -1 }}></div>
-          <img src="/story_vision.png" alt="Building the Future" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: 'var(--border-radius-lg)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }} />
+          <img src="/gallery_1.png" alt="Building the Future" style={{ width: '100%', height: '400px', objectFit: 'cover', objectPosition: 'center 60%', borderRadius: 'var(--border-radius-lg)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }} />
         </div>
         <div style={{ direction: 'ltr' }}>
           <h3 style={{ color: 'var(--text-primary)', fontSize: '2.5rem', marginBottom: '1.5rem' }}>Building the Future</h3>

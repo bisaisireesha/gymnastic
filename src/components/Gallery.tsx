@@ -1,11 +1,12 @@
+"use client";
 import React from 'react';
 
 const Gallery = () => {
   const images = [
-    'https://images.unsplash.com/photo-1565992441121-4367c2967103?w=800&q=80',
-    'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=800&q=80',
-    'https://images.unsplash.com/photo-1517130038641-a774d04afb3c?w=800&q=80',
-    'https://images.unsplash.com/photo-1598136490937-f77b0ce520fe?w=800&q=80'
+    { url: '/gallery_1.png', position: 'center 60%' }, // Hide ceiling, focus on child
+    { url: '/gallery_5.png', position: 'center 80%' }, // Adjust group focus
+    { url: '/gallery_3.png', position: 'center 80%' }, // Adjust group focus
+    { url: '/gallery_4.png', position: 'center 70%' }  // Adjust single focus
   ];
 
   return (
@@ -14,15 +15,31 @@ const Gallery = () => {
         <h2 className="text-gradient">Gallery & Stories</h2>
         <p style={{ color: 'var(--text-secondary)' }}>Moments of triumph at Next Genz Gymnastics.</p>
       </div>
-      <div className="grid grid-cols-2">
-        {images.map((url, idx) => (
+      <div className="grid gallery-grid">
+        {images.map((item, idx) => (
           <div key={idx} style={{ 
-            background: `url(${url}) center/cover`, 
-            height: '350px', 
+            overflow: 'hidden',
             borderRadius: 'var(--border-radius-md)',
             border: '2px solid rgba(212, 175, 55, 0.2)',
-            boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
-          }}></div>
+            boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+            display: 'flex',
+            backgroundColor: 'rgba(0,0,0,0.3)'
+          }}>
+            <img 
+              src={item.url} 
+              alt={`Gallery image ${idx + 1}`} 
+              style={{
+                width: '100%',
+                aspectRatio: '1 / 1', // Perfect symmetrical squares
+                objectFit: 'cover',
+                objectPosition: item.position, // Keeps focus perfectly in frame for each specific image
+                display: 'block',
+                transition: 'transform 0.5s ease',
+              }}
+              onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+              onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            />
+          </div>
         ))}
       </div>
     </section>

@@ -23,8 +23,10 @@ const Footer = () => {
             Empowering athletes to reach new heights through expert coaching and world-class facilities.
           </p>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', color: 'var(--text-primary)', marginTop: '1rem' }}>
-            <span style={{ fontSize: '1.5rem' }}>📷</span> 
-            <a href="#" style={{ color: 'var(--text-primary)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--accent-primary)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-primary)'}>
+            <span style={{ display: 'flex', alignItems: 'center' }}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </span>
+            <a href="https://instagram.com/nextgenzgymnastics" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-primary)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--accent-primary)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-primary)'}>
               Instagram: @nextgenzgymnastics
             </a>
           </div>
@@ -68,9 +70,15 @@ const Footer = () => {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
-            <span style={{ fontSize: '1.2rem', marginTop: '2px' }}>📧</span>
+            <span style={{ marginTop: '2px', display: 'flex', alignItems: 'center' }}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </span>
             <div>
-              <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>nextgenzgymnastics@gmail.com</p>
+              <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+                <a href="mailto:nextgenzgymnastics@gmail.com" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--accent-primary)'} onMouseOut={(e) => e.currentTarget.style.color = 'inherit'}>
+                  nextgenzgymnastics@gmail.com
+                </a>
+              </p>
             </div>
           </div>
         </div>

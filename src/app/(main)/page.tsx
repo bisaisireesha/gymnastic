@@ -2,12 +2,11 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Coaches from "@/components/Coaches";
 import Schedule from "@/components/Schedule";
-import Events from "@/components/Events";
+
 import Gallery from "@/components/Gallery";
 import Pricing from "@/components/Pricing";
-import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
-import Contact from "@/components/Contact";
+import RegisterSection from "@/components/RegisterSection";
 import Activities from "@/components/Activities";
 
 export default function Home() {
@@ -18,7 +17,7 @@ export default function Home() {
       <Activities />
       <Coaches />
       <Schedule />
-      <Events />
+
       <Gallery />
       <Pricing />
       <div id="blog" className="section container" style={{ textAlign: 'center' }}>
@@ -26,7 +25,7 @@ export default function Home() {
          <p style={{ color: 'var(--text-secondary)' }}>Check back soon for updates!</p>
       </div>
       <FAQ />
-      <Contact />
+      <RegisterSection />
     </main>
   );
 }
