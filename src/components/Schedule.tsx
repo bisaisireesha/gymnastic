@@ -71,7 +71,7 @@ const Schedule = () => {
       {/* Schedule List */}
       <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
         {activeClasses.map((cls, idx) => (
-          <div key={idx} className="glass-panel schedule-row" style={{ 
+          <div key={idx} className="glass-panel schedule-row mobile-p-2" style={{ 
             display: 'flex', 
             justifyContent: 'space-between', 
             alignItems: 'center',

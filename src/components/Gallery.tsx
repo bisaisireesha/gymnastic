@@ -5,7 +5,7 @@ const Gallery = () => {
   const images = [
     { url: '/gallery_1.png', position: 'center 60%' }, // Hide ceiling, focus on child
     { url: '/gallery_5.png', position: 'center 80%' }, // Adjust group focus
-    { url: '/gallery_3.png', position: 'center 80%' }, // Adjust group focus
+    { url: '/gallery_6.png', position: 'center 80%' }, // Adjust group focus
     { url: '/gallery_4.png', position: 'center 70%' }  // Adjust single focus
   ];
 

@@ -9,7 +9,7 @@ const Footer = () => {
       borderTop: '1px solid rgba(255,255,255,0.05)',
       marginTop: '4rem'
     }}>
-      <div className="container footer-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '4rem', marginBottom: '4rem' }}>
+      <div className="container footer-grid grid grid-cols-3" style={{ gap: '4rem', marginBottom: '4rem' }}>
         
         {/* Brand & Socials */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>

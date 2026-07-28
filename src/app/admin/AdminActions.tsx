@@ -29,11 +29,11 @@ export default function AdminActions() {
   };
 
   return (
-    <div style={{ display: 'flex', gap: '1rem' }}>
+    <div className="flex-wrap-mobile w-full-mobile" style={{ display: 'flex', gap: '1rem' }}>
       <button 
         onClick={handleClear} 
         disabled={isClearing}
-        className="btn" 
+        className="btn w-full-mobile" 
         style={{ background: 'rgba(255,50,50,0.1)', color: '#ff4444', border: '1px solid rgba(255,50,50,0.3)', padding: '0.5rem 1rem', fontSize: '0.9rem' }}
       >
         {isClearing ? 'Clearing...' : 'Clear Database'}
@@ -41,7 +41,7 @@ export default function AdminActions() {
 
       <a 
         href="/api/export-db" 
-        className="btn" 
+        className="btn w-full-mobile" 
         style={{ background: 'var(--accent-primary)', color: '#000', padding: '0.5rem 1rem', fontSize: '0.9rem', textDecoration: 'none', display: 'inline-block' }}
       >
         Export to Excel
@@ -49,7 +49,7 @@ export default function AdminActions() {
 
       <button 
         onClick={handleLogout} 
-        className="btn btn-secondary" 
+        className="btn btn-secondary w-full-mobile" 
         style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}
       >
         Logout

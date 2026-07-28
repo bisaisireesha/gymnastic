@@ -345,4 +345,10 @@ input:focus, select:focus, textarea:focus {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem; /* Smaller gap on mobile */
   }
+  .mobile-p-2 { padding: 1.5rem !important; }
+  .mobile-p-1 { padding: 1rem !important; }
+  .section-mobile-p { padding: 4rem 1rem !important; }
+  .flex-col-mobile { flex-direction: column !important; align-items: flex-start !important; gap: 1rem !important; }
+  .flex-wrap-mobile { flex-wrap: wrap !important; }
+  .w-full-mobile { width: 100% !important; text-align: center; }
 }

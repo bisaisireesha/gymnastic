@@ -85,7 +85,7 @@ const RegisterSection = () => {
           }
         }
       `}</style>
-      <section id="register" className="section container" style={{ padding: '6rem 1rem' }}>
+      <section id="register" className="section container section-mobile-p" style={{ padding: '6rem 1rem' }}>
         
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <h2 className="text-gradient" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', marginBottom: '1rem', fontWeight: 800 }}>Join Our Academy</h2>

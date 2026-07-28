@@ -9,7 +9,7 @@ export default async function AdminDashboard() {
   const registrations = await readSheet('Registrations');
 
   return (
-    <section className="section container" style={{ padding: '8rem 1rem', minHeight: '100vh' }}>
+    <section className="section container section-mobile-p" style={{ padding: '8rem 1rem', minHeight: '100vh' }}>
       <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
         <h2 className="text-gradient" style={{ fontSize: '3rem', marginBottom: '1rem', fontWeight: 800 }}>Admin Dashboard</h2>
         <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem' }}>
@@ -18,7 +18,7 @@ export default async function AdminDashboard() {
       </div>
 
       <div className="glass-panel" style={{ padding: '2rem', borderRadius: '15px', overflowX: 'auto' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
+        <div className="flex-col-mobile" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
             <h3 style={{ color: 'var(--text-primary)', fontSize: '1.5rem', margin: 0 }}>Registrations</h3>
             <span style={{ background: 'var(--accent-primary)', color: '#000', padding: '0.4rem 1rem', borderRadius: '20px', fontWeight: 'bold', fontSize: '0.9rem' }}>

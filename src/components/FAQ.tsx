@@ -10,14 +10,14 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="section container" style={{ padding: '4rem 1rem 8rem' }}>
+    <section id="faq" className="section container section-mobile-p" style={{ padding: '4rem 1rem 8rem' }}>
       <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
         <h2 className="text-gradient" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '1.5rem', fontWeight: 800 }}>Frequently Asked Questions</h2>
         <p style={{ color: 'var(--text-secondary)', fontSize: '1.25rem' }}>Everything you need to know about joining Next Genz.</p>
       </div>
       <div style={{ maxWidth: '800px', margin: '0 auto 8rem auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         {faqs.map((faq, idx) => (
-          <div key={idx} className="glass-panel" style={{ padding: '2rem', borderRadius: '15px' }}>
+          <div key={idx} className="glass-panel mobile-p-1" style={{ padding: '2rem', borderRadius: '15px' }}>
             <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--accent-primary)', fontWeight: 700 }}>{faq.q}</h3>
             <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>{faq.a}</p>
           </div>

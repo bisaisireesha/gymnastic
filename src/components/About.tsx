@@ -47,7 +47,7 @@ const About = () => {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '8rem' }}>
         <div style={{ position: 'relative' }}>
           <div style={{ position: 'absolute', top: '-1rem', left: '-1rem', bottom: '1rem', right: '1rem', background: 'rgba(212, 175, 55, 0.2)', borderRadius: 'var(--border-radius-lg)', zIndex: -1 }}></div>
-          <img src="/gallery_2.png" alt="Our Promise" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: 'var(--border-radius-lg)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }} />
+          <img src="/gallery_6.png" alt="Our Promise" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: 'var(--border-radius-lg)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }} />
         </div>
         <div>
           <h3 style={{ color: 'var(--text-primary)', fontSize: '2.5rem', marginBottom: '1.5rem' }}>Our Promise</h3>
@@ -84,7 +84,7 @@ const About = () => {
           <div style={{ width: '60px', height: '4px', background: 'var(--accent-primary)', margin: '0 auto', borderRadius: '2px' }}></div>
         </div>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '2rem' }}>
+        <div className="grid grid-cols-4" style={{ gap: '2rem' }}>
           {[
             { 
               title: "Quality Coaching", 
@@ -107,7 +107,7 @@ const About = () => {
               icon: <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
             }
           ].map((val, idx) => (
-            <div key={idx} style={{ 
+            <div key={idx} className="mobile-p-2" style={{ 
               padding: '2.5rem 2rem', 
               borderRadius: 'var(--border-radius-lg)', 
               textAlign: 'center', 

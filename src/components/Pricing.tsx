@@ -71,10 +71,7 @@ const Pricing = () => {
       </div>
 
       {/* 4-Card Grid */}
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', 
-        gap: '2rem', 
+      <div className="grid grid-cols-4" style={{ 
         alignItems: 'stretch', // ensures perfectly uniform height
         marginBottom: '6rem'
       }}>
@@ -85,7 +82,7 @@ const Pricing = () => {
             <div 
               key={idx}
               onClick={() => setSelectedPlan(idx)}
-              className="glass-panel" 
+              className="glass-panel mobile-p-2" 
               style={{ 
                 padding: '3rem 2rem', 
                 borderRadius: '20px', 
