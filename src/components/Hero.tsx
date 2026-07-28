@@ -60,8 +60,8 @@ const Hero = () => {
           }
         `}</style>
         <div className="hero-buttons">
-          <a href="#schedule" className="btn btn-secondary hero-btn">Explore Classes</a>
           <a href="#register" className="btn btn-primary hero-btn">Join Now</a>
+          <a href="#schedule" className="btn btn-secondary hero-btn">Explore Classes</a>
         </div>
       </div>
     </section>
