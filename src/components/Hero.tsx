@@ -44,11 +44,6 @@ const Hero = () => {
           }
           @media (max-width: 600px) {
             .hero-buttons {
-              flex-wrap: wrap;
-            }
-            .hero-buttons .hero-btn {
-              width: 100%;
-              text-align: center;
               justify-content: center;
             }
             .hero-container {
